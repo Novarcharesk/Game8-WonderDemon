@@ -1,11 +1,11 @@
 using Godot;
 using System;
 
-public class PlayerController : KinematicBody2D
+public partial class PlayerController : CharacterBody2D
 {
-	private const float Speed = 200f; // Adjust the movement speed as needed
+	private const float Speed = 200f;
 	private Vector2 velocity = Vector2.Zero;
-	private Vector2 gravity = new Vector2(0, 800); // Adjust the gravity as needed
+	private Vector2 gravity = new Vector2(0, 800);
 
 	private enum PlayerState
 	{

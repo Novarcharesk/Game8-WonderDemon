@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d3r50bsurfkfb"]
+[gd_scene load_steps=24 format=3 uid="uid://d3r50bsurfkfb"]
 
 [ext_resource type="Texture2D" uid="uid://borqtdci4tvv1" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_05.png" id="1_2v2oc"]
 [ext_resource type="Texture2D" uid="uid://duet5te6x6wkm" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_09.png" id="2_okpde"]
@@ -24,6 +24,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3rol"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6m3k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_crg1m"]
+size = Vector2(38, 50)
 
 [node name="Node2D" type="Node2D"]
 
@@ -1797,9 +1800,15 @@ position = Vector2(580, -424)
 scale = Vector2(3.9125, 3.53333)
 texture = ExtResource("18_vnh1k")
 
-[node name="PlayerGreenStand" type="Sprite2D" parent="."]
-position = Vector2(36, -25)
-texture = ExtResource("19_sn1hy")
-script = ExtResource("20_piiot")
-
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(130, -25)
+texture = ExtResource("19_sn1hy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(130, -25)
+shape = SubResource("RectangleShape2D_crg1m")
+script = ExtResource("20_piiot")
