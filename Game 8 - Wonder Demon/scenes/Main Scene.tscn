@@ -1,9 +1,1805 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3r50bsurfkfb"]
+[gd_scene load_steps=23 format=3 uid="uid://d3r50bsurfkfb"]
 
 [ext_resource type="Texture2D" uid="uid://borqtdci4tvv1" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_05.png" id="1_2v2oc"]
+[ext_resource type="Texture2D" uid="uid://duet5te6x6wkm" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_09.png" id="2_okpde"]
+[ext_resource type="Texture2D" uid="uid://cixmct8ls75hy" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_18.png" id="3_oalvw"]
+[ext_resource type="Texture2D" uid="uid://tycwop6nn2j3" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_19.png" id="4_p1fs8"]
+[ext_resource type="Texture2D" uid="uid://cyuj1ovqusld8" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_10.png" id="5_g5ffd"]
+[ext_resource type="Texture2D" uid="uid://ckqg7t4io5rbw" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_03.png" id="6_g212h"]
+[ext_resource type="Texture2D" uid="uid://bcyrh41j147qd" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_06.png" id="7_j4d0j"]
+[ext_resource type="Texture2D" uid="uid://bhmkh407xvpxb" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_04.png" id="8_gkc2y"]
+[ext_resource type="Texture2D" uid="uid://deil0kwipyp5q" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_02.png" id="9_880st"]
+[ext_resource type="Texture2D" uid="uid://bkp3a1cindgd0" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_27.png" id="10_acalj"]
+[ext_resource type="Texture2D" uid="uid://divbl73sl4snp" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_03.png" id="11_l4mte"]
+[ext_resource type="Texture2D" uid="uid://1wbt2k7mixik" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_12.png" id="12_u4yx2"]
+[ext_resource type="Texture2D" uid="uid://d0tcm3n33mixi" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_13.png" id="13_1cavr"]
+[ext_resource type="Texture2D" uid="uid://34gouk8c3p1p" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_04.png" id="14_ymp3y"]
+[ext_resource type="Texture2D" uid="uid://br7xlcer7c5cy" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Brown tiles/tileBrown_22.png" id="15_xf55k"]
+[ext_resource type="Texture2D" uid="uid://0ppmwmuwp55f" path="res://Imported Assets/kenney_abstract-platformer/PNG/Other/buttonFloor.png" id="16_eu2bl"]
+[ext_resource type="Texture2D" uid="uid://do7at1j3daadl" path="res://Imported Assets/kenney_abstract-platformer/PNG/Other/buttonFloor_round.png" id="17_v2t8n"]
+[ext_resource type="Texture2D" uid="uid://bfgncb3jkmvdg" path="res://Imported Assets/kenney_abstract-platformer/PNG/Backgrounds/set2_background.png" id="18_vnh1k"]
+[ext_resource type="Texture2D" uid="uid://c7sdhfyhq0dyk" path="res://Imported Assets/kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_stand.png" id="19_sn1hy"]
+[ext_resource type="Script" path="res://scripts/PlayerController.cs" id="20_piiot"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3rol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6m3k"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="TileBlue05" type="Sprite2D" parent="."]
+[node name="Blue Ground" type="StaticBody2D" parent="."]
+z_index = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue Ground"]
+shape = SubResource("RectangleShape2D_a3rol")
+
+[node name="TileBlue05" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
 position = Vector2(-32, 32)
 texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue43" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-96, -480)
+rotation = -3.1407
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue44" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-32, -480)
+rotation = -3.1407
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue45" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(32, -480)
+rotation = -3.1407
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue46" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(96, -480)
+rotation = -3.1407
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue06" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(32, 32)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue07" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(96, 32)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue08" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(160, 32)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue09" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, 32)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue10" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(288, 32)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue36" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-96, -608)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue47" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -608)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue37" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-32, -608)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue38" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(32, -608)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue51" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue60" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue61" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue98" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue99" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue100" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue101" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue102" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue103" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue104" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1248, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue105" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1312, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue106" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1376, -544)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue39" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(96, -608)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue40" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(160, -608)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue110" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, -608)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue108" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(288, -480)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue109" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(288, -544)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue252" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -544)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue253" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -480)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue254" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -416)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue256" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -352)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue258" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -288)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue259" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -224)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue260" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -160)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue261" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -96)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue262" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -32)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue263" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, 32)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue11" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(352, 32)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue12" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(416, 32)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue13" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(480, -32)
+texture = ExtResource("2_okpde")
+
+[node name="TileBlue18" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(480, 32)
+texture = ExtResource("3_oalvw")
+
+[node name="TileBlue19" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-96, 32)
+texture = ExtResource("4_p1fs8")
+
+[node name="TileBlue14" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-96, -32)
+texture = ExtResource("5_g5ffd")
+
+[node name="TileBlue15" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -96)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue17" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -160)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue22" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -224)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue33" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -288)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue34" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -352)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue35" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -416)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue20" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -32)
+rotation = 1.5708
+texture = ExtResource("3_oalvw")
+
+[node name="TileBlue16" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -96)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue23" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -160)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue24" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -224)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue62" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -288)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue63" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -352)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue64" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -416)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue27" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -480)
+rotation = 1.5708
+texture = ExtResource("1_2v2oc")
+flip_v = true
+
+[node name="TileBlue21" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -32)
+rotation = 1.5708
+texture = ExtResource("3_oalvw")
+flip_v = true
+
+[node name="TileBlue03" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue04" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue25" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, -800)
+rotation = -1.5708
+texture = ExtResource("7_j4d0j")
+flip_h = true
+
+[node name="TileBlue41" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -544)
+texture = ExtResource("7_j4d0j")
+
+[node name="TileBlue115" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -800)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue133" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -992)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue134" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(480, -992)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue135" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(416, -992)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue116" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -800)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue117" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -800)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue118" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -800)
+texture = ExtResource("7_j4d0j")
+
+[node name="TileBlue255" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-32, -800)
+texture = ExtResource("7_j4d0j")
+
+[node name="TileBlue257" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-288, -800)
+texture = ExtResource("7_j4d0j")
+flip_h = true
+
+[node name="TileBlue124" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -672)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue125" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -672)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue126" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -672)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue127" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -672)
+texture = ExtResource("7_j4d0j")
+
+[node name="TileBlue131" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1440, -544)
+texture = ExtResource("7_j4d0j")
+
+[node name="TileBlue128" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -672)
+texture = ExtResource("7_j4d0j")
+flip_h = true
+
+[node name="TileBlue26" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1184, -544)
+texture = ExtResource("8_gkc2y")
+
+[node name="TileBlue28" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue29" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue30" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue31" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue32" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue52" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue65" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue66" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue67" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue68" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue69" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(480, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue70" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(416, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue71" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(352, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue72" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(288, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue73" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue74" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(160, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue75" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(96, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue76" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(32, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue77" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-32, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue78" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-96, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue79" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue80" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue91" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue92" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-96, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue93" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-32, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue94" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(32, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue95" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(96, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue96" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(160, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue97" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue111" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue112" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue53" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue54" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue55" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue56" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue57" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue154" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue155" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue156" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue157" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue158" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue159" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue160" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue161" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue162" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue163" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue164" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue165" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue182" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -544)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue166" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1184, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue167" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1184, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue168" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1248, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue169" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1248, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue170" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1312, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue171" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1312, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue172" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1184, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue173" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1184, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue174" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1248, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue175" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1248, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue176" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1312, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue177" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1312, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue183" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue184" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue185" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue186" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue187" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue189" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue190" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue188" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue191" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue192" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue193" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue194" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue195" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue196" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue197" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue198" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue199" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue200" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue201" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue202" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue203" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue204" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue205" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue237" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue238" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue239" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue240" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue241" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue242" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue243" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1056, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue244" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1120, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue206" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue207" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue208" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue233" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue234" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue235" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue236" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue209" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue210" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue211" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue212" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue213" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue214" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue215" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue216" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue217" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue218" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue219" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, 32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue220" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, -32)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue221" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(864, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue222" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(928, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue223" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(992, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue224" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue225" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue226" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(800, 96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue178" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1376, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue179" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1376, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue180" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1440, -416)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue181" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1440, -480)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue245" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1376, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue246" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1376, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue247" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1440, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue248" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(1440, -352)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue129" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -800)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue130" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -864)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue141" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -928)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue142" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(480, -928)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue143" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(416, -928)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue249" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-96, -800)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue250" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -800)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue251" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -800)
+texture = ExtResource("1_2v2oc")
+
+[node name="TileBlue145" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -864)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue146" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(480, -864)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue147" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(416, -864)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue148" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(608, -800)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue149" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -800)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue150" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(480, -800)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue151" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(416, -800)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue152" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(352, -800)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue153" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(288, -800)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue144" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(352, -864)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue58" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue59" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -288)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue227" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue228" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -224)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue229" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue230" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -160)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue231" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(672, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue232" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(736, -96)
+texture = ExtResource("6_g212h")
+
+[node name="TileBlue42" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-160, -480)
+rotation = 1.5708
+texture = ExtResource("4_p1fs8")
+
+[node name="TileBlue48" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(160, -480)
+rotation = 3.14159
+texture = ExtResource("4_p1fs8")
+
+[node name="TileBlue49" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(160, -416)
+rotation = -1.5708
+texture = ExtResource("8_gkc2y")
+
+[node name="TileBlue107" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(288, -416)
+rotation = -4.71239
+texture = ExtResource("8_gkc2y")
+flip_h = true
+
+[node name="TileBlue50" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(288, -608)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+
+[node name="TileBlue114" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(-224, -608)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+flip_v = true
+
+[node name="TileBlue113" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(544, -544)
+rotation = -0.00230107
+texture = ExtResource("2_okpde")
+
+[node name="TileBlue119" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(736, -800)
+texture = ExtResource("4_p1fs8")
+
+[node name="TileBlue120" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(672, -864)
+texture = ExtResource("4_p1fs8")
+
+[node name="TileBlue121" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(736, -864)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+
+[node name="TileBlue122" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(608, -928)
+texture = ExtResource("4_p1fs8")
+
+[node name="TileBlue138" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(352, -928)
+texture = ExtResource("4_p1fs8")
+flip_h = true
+
+[node name="TileBlue123" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(672, -928)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+
+[node name="TileBlue132" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(608, -992)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+
+[node name="TileBlue136" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(352, -992)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+flip_v = true
+
+[node name="TileBlue137" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(288, -928)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+flip_v = true
+
+[node name="TileBlue139" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+position = Vector2(288, -864)
+texture = ExtResource("4_p1fs8")
+flip_h = true
+
+[node name="TileBlue140" type="Sprite2D" parent="Blue Ground/CollisionShape2D"]
+z_index = 1
+position = Vector2(224, -864)
+rotation = 1.5708
+texture = ExtResource("2_okpde")
+flip_v = true
+
+[node name="Red Ground" type="StaticBody2D" parent="."]
+z_index = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red Ground"]
+shape = SubResource("RectangleShape2D_v6m3k")
+
+[node name="TileBrown02" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -32)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown27" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -32)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown03" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -96)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown28" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -96)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown04" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -160)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown29" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -160)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown05" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -224)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown30" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -224)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown06" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -288)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown31" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -288)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown07" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -352)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown33" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -352)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown36" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(544, -352)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown08" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -416)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown10" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -480)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown11" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -544)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown14" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -608)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown38" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(224, -736)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+flip_v = true
+
+[node name="TileBrown77" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(224, -800)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+flip_v = true
+
+[node name="TileBrown78" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(224, -864)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+flip_v = true
+
+[node name="TileBrown50" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(224, -672)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+flip_v = true
+
+[node name="TileBrown84" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-352, -608)
+rotation = -1.5708
+texture = ExtResource("9_880st")
+
+[node name="TileBrown12" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -671.96)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown25" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(160, -928)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown51" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(96, -928)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown62" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(32, -928)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown91" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-32, -928)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown13" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(544, -671.96)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown17" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(608, -672)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown34" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -416)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown35" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -480)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown39" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -544)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown41" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(480, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown48" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(160, -736)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown56" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(96, -736)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown61" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(32, -736)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown63" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(160, -800)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown72" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(96, -800)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown73" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(32, -800)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown74" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(160, -864)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown75" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(96, -864)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown83" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(32, -864)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown92" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-32, -864)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown64" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-32, -736)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown57" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(96, -672)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown58" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(32, -672)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown59" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-32, -672)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown60" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-96, -672)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown76" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-96, -736)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown82" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-160, -672)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown89" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-224, -672)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown93" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-224, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown90" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-160, -736)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown88" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-288, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown49" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(160, -672)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown42" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(544, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown43" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(608, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown18" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(672, -671.96)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown19" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(736, -672)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown23" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(800, -672)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown44" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(672, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown45" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(736, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown46" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(800, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown47" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(864, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown24" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1376, -672)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown26" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1312, -672)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown32" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1248, -672)
+texture = ExtResource("9_880st")
+
+[node name="TileBrown53" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1248, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown54" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1312, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown55" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1376, -608)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown40" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(544, -544)
+texture = ExtResource("10_acalj")
+
+[node name="TileBrown09" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1440, -608)
+rotation = 1.5708
+texture = ExtResource("11_l4mte")
+
+[node name="TileBrown20" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1184, -608)
+rotation = 1.5708
+texture = ExtResource("11_l4mte")
+flip_v = true
+
+[node name="TileBrown15" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(416, -671.96)
+texture = ExtResource("12_u4yx2")
+
+[node name="TileBrown52" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-96, -800)
+texture = ExtResource("12_u4yx2")
+
+[node name="TileBrown16" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1440, -672)
+texture = ExtResource("13_1cavr")
+
+[node name="TileBrown21" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(1184, -672)
+texture = ExtResource("13_1cavr")
+flip_h = true
+
+[node name="TileBrown22" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(928, -608)
+rotation = 1.5708
+texture = ExtResource("14_ymp3y")
+
+[node name="TileBrown65" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-224, -736)
+texture = ExtResource("15_xf55k")
+flip_h = true
+
+[node name="TileBrown87" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-288, -544)
+texture = ExtResource("15_xf55k")
+flip_h = true
+flip_v = true
+
+[node name="TileBrown71" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-96, -864)
+texture = ExtResource("15_xf55k")
+flip_h = true
+
+[node name="TileBrown66" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-288, -736)
+texture = ExtResource("12_u4yx2")
+
+[node name="TileBrown80" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-160, -864)
+texture = ExtResource("12_u4yx2")
+
+[node name="TileBrown81" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-96, -928)
+texture = ExtResource("12_u4yx2")
+
+[node name="TileBrown79" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(224, -928)
+texture = ExtResource("12_u4yx2")
+flip_h = true
+
+[node name="TileBrown69" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-96, -800)
+texture = ExtResource("15_xf55k")
+flip_h = true
+
+[node name="TileBrown70" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-96, -800)
+texture = ExtResource("12_u4yx2")
+
+[node name="TileBrown67" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-352, -672)
+texture = ExtResource("12_u4yx2")
+
+[node name="TileBrown85" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-352, -544)
+texture = ExtResource("12_u4yx2")
+flip_v = true
+
+[node name="TileBrown86" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-288, -480)
+texture = ExtResource("12_u4yx2")
+flip_v = true
+
+[node name="TileBrown68" type="Sprite2D" parent="Red Ground/CollisionShape2D"]
+position = Vector2(-288, -672)
+texture = ExtResource("15_xf55k")
+flip_h = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonFloor" type="Sprite2D" parent="Control"]
+z_index = 1
+position = Vector2(416, -6)
+texture = ExtResource("16_eu2bl")
+
+[node name="ButtonFloor2" type="Sprite2D" parent="Control"]
+z_index = 1
+position = Vector2(1248, -582)
+texture = ExtResource("16_eu2bl")
+
+[node name="ButtonFloor3" type="Sprite2D" parent="Control"]
+z_index = 1
+position = Vector2(863, -582)
+texture = ExtResource("16_eu2bl")
+
+[node name="ButtonFloor4" type="Sprite2D" parent="Control"]
+z_index = 1
+position = Vector2(-32, -646)
+texture = ExtResource("16_eu2bl")
+
+[node name="ButtonFloorRound" type="Sprite2D" parent="Control"]
+position = Vector2(609, -619)
+texture = ExtResource("17_v2t8n")
+
+[node name="ButtonFloorRound3" type="Sprite2D" parent="Control"]
+position = Vector2(-32, -872)
+texture = ExtResource("17_v2t8n")
+
+[node name="ButtonFloorRound2" type="Sprite2D" parent="Control"]
+position = Vector2(1377, -619)
+texture = ExtResource("17_v2t8n")
+
+[node name="Set2Background" type="Sprite2D" parent="Control"]
+position = Vector2(580, -424)
+scale = Vector2(3.9125, 3.53333)
+texture = ExtResource("18_vnh1k")
+
+[node name="PlayerGreenStand" type="Sprite2D" parent="."]
+position = Vector2(36, -25)
+texture = ExtResource("19_sn1hy")
+script = ExtResource("20_piiot")
+
+[node name="Camera2D" type="Camera2D" parent="."]

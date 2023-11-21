@@ -1,0 +1,6 @@
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.csproj.AssemblyReference.cache
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.AssemblyInfoInputs.cache
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.AssemblyInfo.cs
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.csproj.CoreCompileInputs.cache
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.sourcelink.json
