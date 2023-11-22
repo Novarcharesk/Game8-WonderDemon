@@ -89,7 +89,7 @@ public partial class Player : CharacterBody2D
 		}
 	}
 
-	public void ToggleLayer()
+	public void ToggleLayer(bool IsOnFloor)
 	{
 		GD.Print("Works");
 		// Switch between collision layers (assuming 1 and 2 are your desired layers)
