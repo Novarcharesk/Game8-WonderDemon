@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1mfH4MCqom0KlQP3TjZW0oKhIsPkPq/83+/MdpeC3mCkpRmXFQEHfpzocwt/Rk6kUfOSY7jaasGj+G/6qsuZpA==",
+  "dgSpecHash": "mp+OqIDFIoFw1xsMLbBvNp78I73jQWF/8KLFkNPhmxlC/AdBbLmxFwU8pVAd+sX+y7ZzpbHMbQefNxzWydF59g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rowan\\Desktop\\GDS212 Projects\\Game-8---Wonder-Demon\\Game 8 - Wonder Demon\\Game 8 - Wonder Demon.csproj",
+  "projectFilePath": "C:\\Users\\1028955\\Desktop\\GDS212 Projects\\Game 8\\Game8-WonderDemon\\Game 8 - Wonder Demon\\Game 8 - Wonder Demon.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rowan\\.nuget\\packages\\godot.sourcegenerators\\4.1.3\\godot.sourcegenerators.4.1.3.nupkg.sha512",
-    "C:\\Users\\rowan\\.nuget\\packages\\godotsharp\\4.1.3\\godotsharp.4.1.3.nupkg.sha512",
-    "C:\\Users\\rowan\\.nuget\\packages\\godotsharpeditor\\4.1.3\\godotsharpeditor.4.1.3.nupkg.sha512",
-    "C:\\Users\\rowan\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\rowan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
-    "C:\\Users\\rowan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
+    "C:\\Users\\1028955\\.nuget\\packages\\godot.sourcegenerators\\4.1.3\\godot.sourcegenerators.4.1.3.nupkg.sha512",
+    "C:\\Users\\1028955\\.nuget\\packages\\godotsharp\\4.1.3\\godotsharp.4.1.3.nupkg.sha512",
+    "C:\\Users\\1028955\\.nuget\\packages\\godotsharpeditor\\4.1.3\\godotsharpeditor.4.1.3.nupkg.sha512"
   ],
   "logs": []
 }
