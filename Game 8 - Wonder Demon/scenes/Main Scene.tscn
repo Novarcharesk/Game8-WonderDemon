@@ -1854,3 +1854,5 @@ visible = false
 position = Vector2(580, -424)
 scale = Vector2(3.9125, 3.53333)
 texture = ExtResource("18_vnh1k")
+
+[connection signal="body_entered" from="Node2D/ButtonFloor/Area2D" to="Node2D/ButtonFloor/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]

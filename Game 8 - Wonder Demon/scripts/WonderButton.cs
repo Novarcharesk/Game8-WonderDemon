@@ -6,14 +6,17 @@ public partial class WonderButton : Node
 	// Reference to the player node (assign in the Inspector)
 	public Player player;
 
-	private void OnBodyEntered(Node2D body)
+	
+	private void _on_area_2d_body_entered(Node2D body)
 	{
-		// Assuming the player node has a method to toggle its layer
-		if (player != null)
+		// Check if the entering body is the player
+		if (body is Player playerNode)
 		{
-			player.ToggleLayer();
+			// Assuming the player node has a method to toggle its layer
+			if (playerNode != null)
+			{
+				playerNode.ToggleLayer();
+			}
 		}
-		
-		GD.Print("Works");
 	}
 }
