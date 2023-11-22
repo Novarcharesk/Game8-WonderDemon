@@ -93,12 +93,12 @@ public partial class Player : CharacterBody2D
 	{
 		GD.Print("Works");
 		// Switch between collision layers (assuming 1 and 2 are your desired layers)
-		if (CollisionLayer == 1)
+		if (CollisionLayer == 1 && IsOnFloor)
 		{
 			CollisionLayer = 2;
 			currentState = PlayerState.WallWalking;
 		}
-		else
+		else if (CollisionLayer == 2 && !IsOnFloor)
 		{
 			CollisionLayer = 1;
 			currentState = PlayerState.Platformer;
