@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Game 8 - Wonder Demon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7efa9e405d9f2fcdcc723cfabdc4bcdd9accc089")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b512f91c3c6b84a88969f7b14fb7bad32bac708")]
 [assembly: System.Reflection.AssemblyProductAttribute("Game 8 - Wonder Demon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Game 8 - Wonder Demon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
