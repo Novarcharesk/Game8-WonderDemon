@@ -5,8 +5,6 @@ public partial class Player : CharacterBody2D
 {
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
-
-	// Get the gravity from the project settings to be synced with RigidBody nodes.
 	public float gravity = 980;
 
 	public enum PlayerState
@@ -16,32 +14,46 @@ public partial class Player : CharacterBody2D
 	}
 
 	private PlayerState currentState = PlayerState.Platformer;
-
-	// Public property to store a reference to the WonderButton
-	public WonderButton WonderButtonReference { get; set; }
+	private int maxHealth = 3;
+	private int currentHealth;
 
 	public override void _Ready()
 	{
-		//currentState = PlayerState.WallWalking;
+		// Initialize health
+		currentHealth = maxHealth;
 	}
 
-	public override void _Process(double delta) // Change from _PhysicsProcess to _Process
+	public override void _Process(double delta)
 	{
+		// Check if the player is on layer 2
+		if (CollisionLayer == 2)
+		{
+			GD.Print("Player is on Layer 2");
+			// You can add any specific actions you want when the player is on layer 2
+		}
+
+		// Debug information about collision layers and masks
+		GD.Print("Player CollisionLayer:", CollisionLayer);
+		GD.Print("Player CollisionMask:", CollisionMask);
+
+		// Check for player defeat condition
+		if (currentHealth <= 0)
+		{
+			GD.Print("Player Defeated");
+			// You can add any specific actions for player defeat
+			return;
+		}
+
 		if (currentState == PlayerState.Platformer)
 		{
-			//normal 'left/right' movement
 			Vector2 velocity = Velocity;
 
-			// Add the gravity.
 			if (!IsOnFloor())
 				velocity.Y += gravity * (float)delta;
 
-			// Handle Jump.
 			if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 				velocity.Y = JumpVelocity;
 
-			// Get the input direction and handle the movement/deceleration.
-			// As good practice, you should replace UI actions with custom gameplay actions.
 			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 			if (direction != Vector2.Zero)
 			{
@@ -57,14 +69,8 @@ public partial class Player : CharacterBody2D
 		}
 		else if (currentState == PlayerState.WallWalking)
 		{
-			//wall walking state
-			GD.Print("Hello");
-
-			//normal 'left/right' movement
 			Vector2 velocity = Velocity;
 
-			// Get the input direction and handle the movement/deceleration.
-			// As good practice, you should replace UI actions with custom gameplay actions.
 			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
 			if (direction != Vector2.Zero)
 			{
@@ -89,19 +95,36 @@ public partial class Player : CharacterBody2D
 		}
 	}
 
-	public void ToggleLayer(bool IsOnFloor)
+	public void ToggleLayer(bool isOnFloor)
 	{
-		GD.Print("Works");
-		// Switch between collision layers (assuming 1 and 2 are your desired layers)
-		if (CollisionLayer == 1 && IsOnFloor)
+		GD.Print("ToggleLayer Called");
+		// Switch between collision layers and masks
+		if (CollisionLayer == 1 && isOnFloor)
 		{
+			GD.Print("Switching to WallWalking");
 			CollisionLayer = 2;
+			CollisionMask = 2; // Set the collision mask to include Layer 2
 			currentState = PlayerState.WallWalking;
 		}
-		else if (CollisionLayer == 2 && !IsOnFloor)
+		else if (CollisionLayer == 2 && !isOnFloor)
 		{
+			GD.Print("Switching to Platformer");
 			CollisionLayer = 1;
+			CollisionMask = 1; // Set the collision mask to include Layer 1
 			currentState = PlayerState.Platformer;
+		}
+	}
+
+	public void TakeDamage(int damage)
+	{
+		GD.Print("Player took damage: ", damage);
+		currentHealth -= damage;
+
+		// Check for player defeat condition
+		if (currentHealth <= 0)
+		{
+			GD.Print("Player Defeated");
+			// You can add any specific actions for player defeat
 		}
 	}
 }

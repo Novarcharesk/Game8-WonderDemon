@@ -21,3 +21,15 @@ C:\Users\1028955\Desktop\GDS212 Projects\Game 8\Game8-WonderDemon\Game 8 - Wonde
 C:\Users\1028955\Desktop\GDS212 Projects\Game 8\Game8-WonderDemon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.pdb
 C:\Users\1028955\Desktop\GDS212 Projects\Game 8\Game8-WonderDemon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.genruntimeconfig.cache
 C:\Users\1028955\Desktop\GDS212 Projects\Game 8\Game8-WonderDemon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\ref\Game 8 - Wonder Demon.dll
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\bin\Debug\Game 8 - Wonder Demon.deps.json
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\bin\Debug\Game 8 - Wonder Demon.runtimeconfig.json
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\bin\Debug\Game 8 - Wonder Demon.dll
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\bin\Debug\Game 8 - Wonder Demon.pdb
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.csproj.CopyComplete
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.dll
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\refint\Game 8 - Wonder Demon.dll
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.pdb
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\Game 8 - Wonder Demon.genruntimeconfig.cache
+C:\Users\rowan\Desktop\GDS212 Projects\Game-8---Wonder-Demon\Game 8 - Wonder Demon\.godot\mono\temp\obj\Debug\ref\Game 8 - Wonder Demon.dll

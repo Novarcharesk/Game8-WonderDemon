@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://d3r50bsurfkfb"]
+[gd_scene load_steps=29 format=3 uid="uid://d3r50bsurfkfb"]
 
 [ext_resource type="Texture2D" uid="uid://borqtdci4tvv1" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_05.png" id="1_2v2oc"]
 [ext_resource type="Script" path="res://scripts/WonderButton.cs" id="2_12fdv"]
 [ext_resource type="Texture2D" uid="uid://duet5te6x6wkm" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_09.png" id="2_okpde"]
 [ext_resource type="Texture2D" uid="uid://cixmct8ls75hy" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_18.png" id="3_oalvw"]
+[ext_resource type="Script" path="res://scripts/GameManager.cs" id="4_hrn1i"]
 [ext_resource type="Texture2D" uid="uid://tycwop6nn2j3" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_19.png" id="4_p1fs8"]
 [ext_resource type="Texture2D" uid="uid://cyuj1ovqusld8" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_10.png" id="5_g5ffd"]
 [ext_resource type="Texture2D" uid="uid://ckqg7t4io5rbw" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_03.png" id="6_g212h"]
@@ -21,19 +22,42 @@
 [ext_resource type="Texture2D" uid="uid://bfgncb3jkmvdg" path="res://Imported Assets/kenney_abstract-platformer/PNG/Backgrounds/set2_background.png" id="18_vnh1k"]
 [ext_resource type="Texture2D" uid="uid://c7sdhfyhq0dyk" path="res://Imported Assets/kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_stand.png" id="19_sn1hy"]
 [ext_resource type="Script" path="res://scripts/Player.cs" id="19_umava"]
+[ext_resource type="Texture2D" uid="uid://bd11gp16tyvvh" path="res://Imported Assets/kenney_abstract-platformer/PNG/Enemies/enemyFloating_1.png" id="23_s76si"]
+[ext_resource type="Script" path="res://scripts/Enemy.cs" id="24_cpltm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4n11"]
-size = Vector2(48, 12)
+size = Vector2(48, 27)
+
+[sub_resource type="CSharpScript" id="CSharpScript_x7r2x"]
+script/source = "using Godot;
+using System;
+
+public partial class win : Area2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_767ma"]
 size = Vector2(38, 49)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hb41d"]
+radius = 28.0179
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="ButtonFloor" type="Sprite2D" parent="Node2D"]
-z_index = 1
+z_index = 2
 position = Vector2(416, -6)
 texture = ExtResource("16_eu2bl")
 
@@ -45,36 +69,100 @@ script = ExtResource("2_12fdv")
 IsOnFloor = true
 
 [node name="ButtonFloor2" type="Sprite2D" parent="Node2D"]
-z_index = 1
+z_index = 2
 position = Vector2(1248, -582)
 texture = ExtResource("16_eu2bl")
 
+[node name="Area2D" type="Area2D" parent="Node2D/ButtonFloor2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ButtonFloor2/Area2D"]
+shape = SubResource("RectangleShape2D_x4n11")
+script = ExtResource("2_12fdv")
+IsOnFloor = true
+
 [node name="ButtonFloor3" type="Sprite2D" parent="Node2D"]
-z_index = 1
+z_index = 2
 position = Vector2(863, -582)
 texture = ExtResource("16_eu2bl")
 
+[node name="Area2D" type="Area2D" parent="Node2D/ButtonFloor3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ButtonFloor3/Area2D"]
+shape = SubResource("RectangleShape2D_x4n11")
+script = ExtResource("2_12fdv")
+IsOnFloor = true
+
 [node name="ButtonFloor4" type="Sprite2D" parent="Node2D"]
-z_index = 1
+z_index = 2
 position = Vector2(-32, -646)
 texture = ExtResource("16_eu2bl")
 
+[node name="Area2D" type="Area2D" parent="Node2D/ButtonFloor4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ButtonFloor4/Area2D"]
+shape = SubResource("RectangleShape2D_x4n11")
+script = ExtResource("2_12fdv")
+IsOnFloor = true
+
 [node name="ButtonFloorRound" type="Sprite2D" parent="Node2D"]
-z_index = 1
-position = Vector2(609, -619)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+position = Vector2(624, -617)
 texture = ExtResource("17_v2t8n")
 
+[node name="Area2D" type="Area2D" parent="Node2D/ButtonFloorRound"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ButtonFloorRound/Area2D"]
+light_mask = 2
+visibility_layer = 2
+shape = SubResource("RectangleShape2D_x4n11")
+script = ExtResource("2_12fdv")
+
 [node name="ButtonFloorRound3" type="Sprite2D" parent="Node2D"]
-z_index = 1
+light_mask = 2
+visibility_layer = 2
+z_index = 2
 position = Vector2(-32, -872)
 texture = ExtResource("17_v2t8n")
 
-[node name="ButtonFloorRound2" type="Sprite2D" parent="Node2D"]
-z_index = 1
-position = Vector2(1377, -619)
-texture = ExtResource("17_v2t8n")
+[node name="Area2D" type="Area2D" parent="Node2D/ButtonFloorRound3"]
+light_mask = 3
+visibility_layer = 3
+collision_layer = 2
+collision_mask = 2
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ButtonFloorRound3/Area2D"]
+light_mask = 2
+visibility_layer = 2
+shape = SubResource("RectangleShape2D_x4n11")
+script = ExtResource("2_12fdv")
+
+[node name="ButtonFloorRound2" type="Sprite2D" parent="Node2D"]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
+position = Vector2(1375, -619)
+texture = ExtResource("17_v2t8n")
+script = ExtResource("4_hrn1i")
+
+[node name="Area2D" type="Area2D" parent="Node2D/ButtonFloorRound2"]
+light_mask = 2
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 2
+script = SubResource("CSharpScript_x7r2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/ButtonFloorRound2/Area2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_x4n11")
+script = ExtResource("2_12fdv")
 
 [node name="Blue Collider" type="StaticBody2D" parent="."]
 
@@ -94,23 +182,63 @@ polygon = PackedVector2Array(1024, -768, 1024, -820, 1013, -832, 767, -832, 576,
 polygon = PackedVector2Array(0, -768, 0, -821, -11, -832, -309, -832, -320, -820, -320, -768)
 
 [node name="Red Collider" type="StaticBody2D" parent="."]
+z_index = 2
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Red Collider"]
-polygon = PackedVector2Array(385, 0, 448, 0, 512, -63, 513, -511, 576, -576, 958, -576, 958, -640, 768, -640, 768, -704, 448, -704, 384, -640)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(383, -1, 386, -639, 449, -704, 770, -703, 769, -642, 956, -640, 959, -580, 1088, -576, 1087, -766, 320, -766, 320, -3)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Red Collider"]
-polygon = PackedVector2Array(1152, -640, 1153, -576, 1471, -576, 1472, -640, 1408, -704, 1216, -704)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(1152, -577, 1090, -576, 1089, -763, 1479, -762, 1480, -573, 1467, -575, 1472, -641, 1409, -704, 1217, -704, 1152, -641)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Red Collider"]
-polygon = PackedVector2Array(256, -640, 256, -768, 204, -768, 192, -777, 192, -832, 255, -896, 191, -960, -64, -960, -191, -832, -11, -832, -1, -821, 0, -768, -256, -768, -384, -640, -384, -576, -256, -449, -256, -576, -191, -640)
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(256, -641, 285, -641, 286, -768, 256, -768)
 
-[node name="Yellow Collider" type="StaticBody2D" parent="."]
-collision_layer = 4
-collision_mask = 4
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Red Collider"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(254, -898, 190, -962, -65, -960, -192, -833, -219, -861, -73, -993, 217, -998, 281, -924)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Yellow Collider"]
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Red Collider"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(-256, -768, -383, -641, -385, -576, -257, -448, -279, -427, -420, -568, -422, -659, -293, -767)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Red Collider"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(383, 0, 383, 13, 480, 13, 541, -61, 545, -507, 586, -548, 1088, -546, 1088, -576, 576, -576, 513, -512, 512, -64, 448, 1)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Red Collider"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(1152, -575, 1472, -576, 1472, -562, 1152, -561)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Red Collider"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(256, -768, 205, -768, 192, -778, 193, -832, 255, -896, 260, -891, 199, -829, 198, -784, 205, -778, 256, -778)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Red Collider"]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+polygon = PackedVector2Array(-193, -832, -11, -832, 0, -819, 0, -770, -257, -768, -258, -777, -8, -779, -6, -816, -16, -826, -194, -827)
 
 [node name="Red Ground" type="Node" parent="."]
 
@@ -1833,7 +1961,7 @@ texture = ExtResource("2_okpde")
 flip_v = true
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(28, -25)
+position = Vector2(48, -25)
 script = ExtResource("19_umava")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
@@ -1843,6 +1971,9 @@ texture = ExtResource("19_sn1hy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_767ma")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -4)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -1855,4 +1986,21 @@ position = Vector2(580, -424)
 scale = Vector2(3.9125, 3.53333)
 texture = ExtResource("18_vnh1k")
 
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(269, -98)
+script = ExtResource("24_cpltm")
+
+[node name="EnemyFloating1" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, -1)
+texture = ExtResource("23_s76si")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_hb41d")
+
 [connection signal="body_entered" from="Node2D/ButtonFloor/Area2D" to="Node2D/ButtonFloor/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Node2D/ButtonFloor2/Area2D" to="Node2D/ButtonFloor2/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Node2D/ButtonFloor3/Area2D" to="Node2D/ButtonFloor3/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Node2D/ButtonFloor4/Area2D" to="Node2D/ButtonFloor4/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Node2D/ButtonFloorRound/Area2D" to="Node2D/ButtonFloorRound/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Node2D/ButtonFloorRound3/Area2D" to="Node2D/ButtonFloorRound3/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Node2D/ButtonFloorRound2/Area2D" to="Node2D/ButtonFloorRound2/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]

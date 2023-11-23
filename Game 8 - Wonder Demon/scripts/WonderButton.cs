@@ -16,6 +16,7 @@ public partial class WonderButton : Node
 			if (playerNode != null)
 			{
 				playerNode.ToggleLayer(IsOnFloor);
+				GD.Print("Works");
 			}
 		}
 	}
