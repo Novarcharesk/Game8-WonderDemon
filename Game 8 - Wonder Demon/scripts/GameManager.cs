@@ -19,24 +19,25 @@ public partial class GameManager : Node
 
 	public override void _Process(double delta)
 	{
-		if (isGameOver)
-		{
-			// Game over logic, e.g., display game over screen or handle game over state
-			GD.Print("Game Over");
-		}
-		else
-		{
-			// Game logic while the game is active
-		}
+		//if (isGameOver)
+		//{
+		//	// Game over logic, e.g., display game over screen or handle game over state
+		//	GD.Print("Game Over");
+		//}
+		//else
+		//{
+		//	// Game logic while the game is active
+		//}
 	}
-
-	private void _on_WinArea_body_entered(Node body)
+	
+	private void _on_WinArea_body_entered(Node2D body)
 	{
-		if (body is CharacterBody2D)
+		if (body is Player)
 		{
 			// Player entered the win area, trigger win state
 			GD.Print("You Win!");
-			isGameOver = true;
+			//isGameOver = true;
+			GetTree().Paused = true;
 		}
 	}
 

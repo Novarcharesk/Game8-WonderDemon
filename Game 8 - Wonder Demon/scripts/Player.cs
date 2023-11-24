@@ -33,8 +33,8 @@ public partial class Player : CharacterBody2D
 		}
 
 		// Debug information about collision layers and masks
-		GD.Print("Player CollisionLayer:", CollisionLayer);
-		GD.Print("Player CollisionMask:", CollisionMask);
+		//GD.Print("Player CollisionLayer:", CollisionLayer);
+		//GD.Print("Player CollisionMask:", CollisionMask);
 
 		// Check for player defeat condition
 		if (currentHealth <= 0)

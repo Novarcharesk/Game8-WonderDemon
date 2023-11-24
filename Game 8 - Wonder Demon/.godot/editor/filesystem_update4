@@ -1,5 +1,4 @@
 res://scenes/Main Scene.tscn
+res://scripts/GameManager.cs
 res://scripts/Player.cs
 res://scripts/WonderButton.cs
-res://scripts/GameManager.cs
-res://scripts/Enemy.cs

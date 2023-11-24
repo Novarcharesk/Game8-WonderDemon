@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://d3r50bsurfkfb"]
+[gd_scene load_steps=27 format=3 uid="uid://d3r50bsurfkfb"]
 
 [ext_resource type="Texture2D" uid="uid://borqtdci4tvv1" path="res://Imported Assets/kenney_abstract-platformer/PNG/Tiles/Blue tiles/tileBlue_05.png" id="1_2v2oc"]
 [ext_resource type="Script" path="res://scripts/WonderButton.cs" id="2_12fdv"]
@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://bfgncb3jkmvdg" path="res://Imported Assets/kenney_abstract-platformer/PNG/Backgrounds/set2_background.png" id="18_vnh1k"]
 [ext_resource type="Texture2D" uid="uid://c7sdhfyhq0dyk" path="res://Imported Assets/kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_stand.png" id="19_sn1hy"]
 [ext_resource type="Script" path="res://scripts/Player.cs" id="19_umava"]
-[ext_resource type="Texture2D" uid="uid://bd11gp16tyvvh" path="res://Imported Assets/kenney_abstract-platformer/PNG/Enemies/enemyFloating_1.png" id="23_s76si"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4n11"]
 size = Vector2(48, 27)
@@ -47,53 +46,6 @@ public partial class win : Area2D
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_767ma"]
 size = Vector2(38, 49)
-
-[sub_resource type="CSharpScript" id="CSharpScript_0ir2b"]
-script/source = "using Godot;
-using System;
-
-public partial class Enemy : CharacterBody2D
-{
-	private const float MoveDistance = 100.0f;
-	private const float MoveSpeed = 50.0f;
-
-	private Vector2 initialPosition;
-	private bool movingRight = true;
-
-	public override void _Ready()
-	{
-		initialPosition = GlobalPosition;
-	}
-
-	public override void _PhysicsProcess(double delta)
-	{
-		// Move the enemy back and forth horizontally
-		Vector2 velocity = Vector2.Zero;
-
-		if (movingRight)
-		{
-			velocity.x += MoveSpeed;
-			if (GlobalPosition.x > initialPosition.x + MoveDistance)
-			{
-				movingRight = false;
-			}
-		}
-		else
-		{
-			velocity.x -= MoveSpeed;
-			if (GlobalPosition.x < initialPosition.x - MoveDistance)
-			{
-				movingRight = true;
-			}
-		}
-
-		MoveAndSlide(velocity);
-	}
-}
-"
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_hb41d"]
-radius = 28.0179
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1wioa"]
 size = Vector2(31, 30)
@@ -233,19 +185,8 @@ offset_bottom = 40.0
 
 [node name="Set2Background" type="Sprite2D" parent="Background"]
 position = Vector2(580, -424)
-scale = Vector2(3.9125, 3.53333)
+scale = Vector2(28.7849, 20.0712)
 texture = ExtResource("18_vnh1k")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(269, -98)
-script = SubResource("CSharpScript_0ir2b")
-
-[node name="EnemyFloating1" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -1)
-texture = ExtResource("23_s76si")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CircleShape2D_hb41d")
 
 [node name="Colliders" type="Node" parent="."]
 
@@ -2066,3 +2007,4 @@ script = ExtResource("4_hrn1i")
 [connection signal="body_entered" from="Node2D/ButtonFloorRound/Area2D" to="Node2D/ButtonFloorRound/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Node2D/ButtonFloorRound3/Area2D" to="Node2D/ButtonFloorRound3/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Node2D/ButtonFloorRound2/Area2D" to="Node2D/ButtonFloorRound2/Area2D/CollisionShape2D" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Win State/Area2D" to="Game Manager" method="_on_WinArea_body_entered"]
